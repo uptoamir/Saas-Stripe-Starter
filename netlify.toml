@@ -1,0 +1,13 @@
+[build]
+command = "pnpm run build"
+publish = ".next"
+
+[build.lifecycle]
+# This command will run before the build process starts
+onPreBuild = "pnpm install"
+
+# This command will run after the build process and before deployment
+onPostBuild = "pnpm start"
+
+[build.environment]
+NODE_VERSION = "20" # Specify the Node.js version as 20
